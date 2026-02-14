@@ -1,0 +1,60 @@
+[project]
+name = "dcoupler"
+version = "0.2.0"
+description = "Differentiable Earth System Coupler"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  { name = "Darri Eythorsson", email = "darri.eythorsson@ucalgary.ca" }
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Hydrology",
+]
+
+dependencies = [
+  "torch>=2.0",
+  "numpy",
+  "scipy",
+  "xarray",
+]
+
+[project.optional-dependencies]
+jax = [
+  "jax>=0.4",
+  "jaxlib",
+]
+models = [
+  # cfuse and droute are companion packages; install from GitHub if needed
+  # "cfuse",
+  # "droute",
+]
+dev = [
+  "pytest",
+  "pytest-cov",
+]
+all = [
+  "dcoupler[jax,dev]",
+]
+
+[project.urls]
+Repository = "https://github.com/DarriEy/dcoupler"
+Homepage = "https://github.com/DarriEy/dcoupler"
+Issues = "https://github.com/DarriEy/dcoupler/issues"
+
+[tool.setuptools.packages.find]
+include = ["dcoupler*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["."]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
