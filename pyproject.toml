@@ -4,18 +4,24 @@ version = "0.2.0"
 description = "Differentiable Earth System Coupler"
 readme = "README.md"
 requires-python = ">=3.10"
-license = "MIT"
+license = "Apache-2.0"
 authors = [
   { name = "Darri Eythorsson", email = "darri.eythorsson@ucalgary.ca" }
 ]
+keywords = ["hydrology", "differentiable", "coupling", "earth-system", "pytorch"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Topic :: Scientific/Engineering :: Hydrology",
+  "Topic :: Scientific/Engineering :: Atmospheric Science",
+  "Typing :: Typed",
 ]
 
 dependencies = [

@@ -58,4 +58,4 @@ pip install dcoupler[all]     # Everything
 
 ## License
 
-MIT
+Apache 2.0 — see [LICENSE](LICENSE) for details.
